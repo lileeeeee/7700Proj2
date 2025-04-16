@@ -64,11 +64,11 @@ def main():
     # Initialize and train the Transformer model
     model = TransformerLM(vocab_size, embedding_dim, nhead, num_layers, hidden_dim, 0.1, max_seq_length).to(device)
     print("----- Training Transformer Model -----")
-    # train_model(model, train_loader, val_loader, device, num_epochs, learning_rate)
+    train_model(model, train_loader, val_loader, device, num_epochs, learning_rate)
 
     # Save the trained model
     model_path = "transformer_model.pth"
-    # torch.save(model.state_dict(), model_path)
+    torch.save(model.state_dict(), model_path)
     print(f"Model saved to {model_path}")
 
     # Load the model for evaluation

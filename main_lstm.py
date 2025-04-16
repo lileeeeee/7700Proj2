@@ -62,11 +62,11 @@ def main():
     # Initialize the model
     model = LSTMLM(vocab_size, embedding_dim, hidden_dim, num_layers).to(device)
     print("----- Training LSTM Model -----")
-    # train_model(model, train_loader, val_loader, device, num_epochs, learning_rate)
+    train_model(model, train_loader, val_loader, device, num_epochs, learning_rate)
     #
     # # Save the model
     model_save_path = "lstm_model.pth"
-    # torch.save(model.state_dict(), model_save_path)
+    torch.save(model.state_dict(), model_save_path)
     print(f"Model saved to {model_save_path}")
 
     # Load the model for evaluation
