@@ -10,6 +10,6 @@ This script will:
  
 •	Load the data, build the dataset & dataloader.
  
-•	Train the RNN model, save checkpoints, and do evaluation (perplexity & BLEU).
+•	Train the model, save checkpoints, and do evaluation (perplexity & BLEU).
  
 •	Print sample generations to the console.
